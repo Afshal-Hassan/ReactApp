@@ -1,0 +1,85 @@
+#filter-module{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#filter-module h1{
+    color:#0056d5 ;
+}
+#date{
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+
+}
+#City{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+#City2{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+}
+#Apply-Submit{
+    width: 100px;
+    
+    text-align: center;
+    font-weight: bold;
+
+   
+   
+    font-size: 15px;
+    margin-top: 30px;
+}
+#Apply-Submit:hover{
+    background-color: #0056d5;
+    color: whitesmoke;
+    border-color: #0056d5;
+}
+
+@media (max-width:500px) {
+    html{
+        font-size: 35%;
+    }
+    #filter-component{
+        height: 70vh;
+    }
+    #Apply-Submit{
+        width: 85px;
+        font-size: 13.5px;
+    }
+    #filter-module h1{
+        color: #0056d5;
+        font-size: 14.3rem;
+        margin-bottom: 25px;
+    }
+    #City{
+        font-size: 16px;
+    }
+    #City2{
+        font-size: 16px;
+    }
+    #filter-module{
+        margin-top: 49px;
+    }
+    
+}
+@media (max-width:360px){
+    #filter-component{
+        height: 110vh;
+    }
+}

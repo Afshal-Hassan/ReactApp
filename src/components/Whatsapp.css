@@ -1,0 +1,10 @@
+#Whatsapp-module{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#whatsapp{
+    width: 200px;
+    height: 100px;
+}

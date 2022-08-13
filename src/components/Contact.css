@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+.Contact{
+    width: 99vw;
+    margin-top: 1.25rem;
+    height: 102vh;
+}
+.Contact h1{
+    width: fit-content;
+transform: translateX(500px);
+    font-size: 6rem;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    margin-top:6.875rem ;
+}
+#contact-name{
+    transform: translateX(0%);
+    margin-top: 3.125rem;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+}
+#contact-email{
+    transform: translateX(0%);
+    margin-top: 1.438;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+}
+#Contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    box-sizing: border-box;
+
+}
+#contact-textarea{
+    font-style: inherit;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+    outline: none;
+   
+    border: 2px solid black;
+    width: 28.125rem;
+    height: 18.75rem;
+    border-radius: 25px;
+    padding-top: 0.625rem;
+    padding-left: 1.438rem;
+
+}
+#Contact-Submit{
+    width: 7.5rem;
+    
+    text-align: center;
+    font-weight: bold;
+
+   
+   
+    font-size: 0.938rem;
+    margin-top: 1.375rem;
+}
+#Contact-Submit:hover{
+    background-color: #0056d5;
+    color: whitesmoke;
+    border-color: #0056d5;
+}
+@media (max-width:61.875rem) {
+    html{
+        font-size: 55%;
+        
+    }
+    .Contact h1{
+        transform: translateX(46.125rem);
+        
+
+    }
+    
+    
+
+    
+}
+
+@media (max-width:31.25rem) {
+    html{
+        font-size: 35%;
+    }
+    .Contact h1{
+        transform: translateX(17.125rem);
+        margin-top:40.875rem ;
+        font-size: 14rem;
+
+    }
+    #contact-name{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 12.125rem;
+    }
+    #contact-email{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    #contact-textarea{
+        width: 58.125rem;
+        height: 38.75rem;
+        font-size: 15px;
+        padding-top: 2.625rem;
+        padding-left: 3.438rem;
+        margin-top: 6.125rem;
+
+    }
+    #Contact-Submit{
+        font-size: 2.638rem;
+        width: 20.5rem;
+        margin-top: 30px;
+    }
+   
+    
+}

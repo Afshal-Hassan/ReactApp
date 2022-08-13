@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#GetAllShipperModule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+#GetAllShipperModule h1{
+    color: #0056d5;
+    position: relative;
+    bottom: 70px;
+}
+#loader{
+    
+    background-color: darkcyan;
+}

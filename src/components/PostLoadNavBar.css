@@ -1,0 +1,13 @@
+#Logout-Submit{
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+    margin-top:20px;
+    font-weight: 600;
+    margin-left: 10px;
+
+}
+#Logout-Submit:hover{
+    color: whitesmoke;
+    background-color: #0056d5;
+}

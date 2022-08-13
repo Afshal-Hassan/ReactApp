@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.Navbar{
+    
+    width: 99.5%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+    transition: 0.5s;
+    left: 0;
+    
+    
+}
+.logo{
+    display: inline;
+    
+
+}
+.MainApp-logo{
+
+    height: 4.313rem;
+    width: 12.656rem;
+ 
+    margin-top: 3px;
+}
+.ul-nav{
+display: flex;
+align-items: center;
+margin-right:50px ;
+justify-content: center;
+
+
+}
+.ul-nav li{
+    
+    margin-left:1.188rem ;
+    margin-right: 1.188rem;
+    list-style: none;
+    font-style: none;
+    outline: none;
+    text-decoration: none;
+    padding:0.313rem ;
+    position: relative;
+    font-weight:450;
+    margin-top: 1.25rem;
+
+}
+.ul-nav li a{
+
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+.ul-nav li a::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background:  #0056d5;
+    left: 0;
+    bottom: -5px;
+    position: absolute;
+    transition: 0.5s;
+
+}
+
+.ul-nav li a:hover::after{
+
+    width: 99%;
+    
+}
+.ul-nav li a:hover{
+    color: #0056d5;
+}
+.Navbar::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: black;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+}
+.switch{
+    
+    position: relative;
+top: 8px;
+height: 65px;
+width: 120px;
+opacity: 0.5;
+border-radius: 25px;
+padding-top: 5px;
+padding-left: 15px;
+
+
+}   
+
+
+
+#label-mode{
+    display: inline;
+    position: relative;
+    bottom: 5px;
+    right: 20px;
+    font-size: 13px;
+    color: black;
+    font-weight: 500;
+    font-style: italic;
+
+
+}
+@media (max-width:61.875rem) {
+    html{
+        font-size: 55%;
+        
+    }
+    
+    
+
+    
+}
+@media (max-width:31.25rem) {
+    html{
+        font-size: 35%;
+    }
+    .Navbar{
+        flex-direction: column;
+        
+    }
+    .ul-nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+        margin-top: 25px;
+    }
+    .banner{
+        width: 70rem;
+        height: 75rem;
+        margin-left: 1.5rem;
+    }
+    .Signup1{
+        margin-top: 100rem;
+        width: 21rem;
+        padding: 2.038rem 6.375rem;
+        font-size: 45%;
+        margin-right: 115px;
+    }
+    .Login{
+        bottom: 7.69rem;
+        width: 21rem;
+        padding: 2.038rem 6.375rem;
+        font-size: 45%;
+        margin-left: 65px;
+    }
+
+    .ul-nav li a{
+        font-weight: 500;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        font-size: 3.035rem;
+        
+
+        
+    }
+    .ul-nav li{
+        margin-top: 3.4rem;
+    }
+    .MainApp-logo{
+        width: 25.656rem;
+       height:  15.313rem;
+    }
+ 
+   
+    
+}

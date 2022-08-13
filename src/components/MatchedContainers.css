@@ -1,0 +1,46 @@
+#matched-module{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#allmatchedloads{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#matchedh1{
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    color: #0056d5;
+}
+
+@media (max-width:31.25rem) {
+    html{
+        font-size: 35%;
+    }
+    #matchedh1{
+        font-size: 7rem;
+    }
+
+}
+
+@media (max-width:330px) {
+
+    #matchedh1{
+        font-size: 6rem;
+    }
+
+
+
+}
+
+@media (min-width:1500px) {
+html{
+    font-size: 100%;
+}    
+}

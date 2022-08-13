@@ -1,0 +1,167 @@
+#my-input{
+    width: 12.5rem;
+    height: 3.063rem;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+#shareContainerComponent{
+    height: 120vh;
+}
+#shareModule{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#shareModule h1{
+    color: #0056d5;
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+#formShare{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+#shareModule h4{
+    color: #0056d5;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#div-input{
+    display: inline;
+    margin-top: 20px;
+}
+#Search-Submit{
+    margin-top: 15px;
+    width: 155px;
+    
+}
+#Search-Submit:hover{
+    background-color: forestgreen;
+    color: whitesmoke;
+   
+}
+#label{
+    color: red;
+    font-size: 11px;
+    margin-bottom: 18px;
+}
+
+#name_shipper{
+  
+border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+
+
+ 
+  
+    
+}
+#point_of_loading{
+    border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+
+}
+#point_of_delivery{
+    border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+
+}
+#product_weight{
+    border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+
+    
+}
+#phone_No{
+    border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+
+}
+#date_of_uploading{
+    border-bottom: 1.5px solid darkcyan;
+    width: 18.75rem;
+    margin-bottom: 8px;
+    margin-top: 50px;
+
+}
+@media (max-width:31.25rem) {
+    html{
+        font-size: 35%;
+    }
+    #shareModule h1{
+        font-size: 9.5rem;
+        margin-top: 200px;
+    }
+ 
+    #name_shipper{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+        
+    }
+    #point_of_loading{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+        
+
+    }
+    #point_of_delivery{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+;
+
+    }
+    #product_weight{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+        
+
+    }
+    #phone_No{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+
+    }
+    #date_of_uploading{
+        width: 33.75rem;
+        height: 20px;
+        font-size: 13px;
+
+    }
+    #Search-Submit{
+        font-size: 1.658rem;
+        width: 21.5rem;
+      
+        margin-top: 20px;
+    }
+  
+    
+}
+
+@media (max-width:330px) {
+
+    #shareModule h1{
+        font-size: 8.5rem;
+        margin-top: 200px;
+    }
+}
+
+@media (min-width:1500px) {
+    html{
+        font-size: 100%;
+    }    
+    }

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+
+#ShipperModule{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    margin-top: 10px;
+}
+#container-shipper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+#Shipper-h1{
+    font-size: 80px;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    color: #0056d5;
+}
+#shipper-module-name{
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 20px;
+}
+#shipper-module-company{
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 20px;
+}
+#shipper-module-location{
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    
+
+}
+#ButtonGroupAll{
+    position: relative;
+    bottom: 100px;
+}
+#buttonGroup1shipper{
+    color: #0056d5;  width: 10.5rem;
+    height: 37px;
+
+    text-align: center;
+    font-weight: bold;
+
+
+
+    font-size: 11px;
+    margin-top: 15px;
+}
+#buttonGroup1shipper:hover{
+     
+    background-color: #0056d5;
+    color: whitesmoke;
+    border-color: #0056d5;
+}
+#buttonGroup2{
+    color: orange;
+}
+#buttonGroup2:hover link{
+   
+    color: whitesmoke;
+    
+
+}
+#buttonGroup2:hover{
+    background-color: orange;
+    color: whitesmoke;
+    border-color: orange;
+
+
+}
+#buttonGroup3:hover{
+    background-color: red;
+    color: whitesmoke;
+    border-color: red;
+
+}
+#link1:hover{
+   
+    color: whitesmoke;
+  
+}
+#link2:hover{
+    color: whitesmoke;
+}
+#link2{
+    color: orange;
+    text-decoration: none;
+    list-style: none;
+}
+#link1{
+    color: #0056d5;
+    text-decoration: none;
+    list-style: none;
+}
+#link3:hover{
+    color: whitesmoke;
+}
+#link3{
+    color: red;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+@media (min-width:1500px) {
+    html{
+        font-size: 100%;
+    }
+
+    #container-shipper{
+        height: 180vh;
+    }
+    #buttonGroup1shipper{
+
+        width: 11.5rem;
+        margin-top: 180px;
+
+    }
+    
+}
+
+@media (max-height:930px) {
+    #container-shipper{
+        height: 180vh;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    #Shipper-h1{
+        font-size: 50px;
+    }
+    #shipper-module-name{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 12.125rem;
+    }
+    #shipper-module-company{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    #shipper-module-location{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+    #buttonGroup1shipper{
+        font-size: 1.958rem;
+        width: 25.5rem;
+        height: 37px;
+        margin-top: 30px;
+    }
+
+}
+@media (height:620px) {
+    #buttonGroup1shipper{
+        font-size: 1.958rem;
+        width: 23.5rem;
+        height: 37px;
+        margin-top: 200px;
+    }
+
+}
+
+
+@media (max-width:390px) {
+
+    #buttonGroup1shipper{
+            font-size: 1.958rem;
+            width: 25.5rem;
+            height: 37px;
+            margin-top: 200px;
+        }
+        #Shipper-h1{
+            font-size: 40px;
+        }
+    }
+
+
+    @media (width:1024px) {
+    
+        #buttonGroup1shipper{
+            font-size: 1.058rem;
+            width: 18.0rem;
+            margin-top: 200px;
+        }
+        html{
+            font-size: 50%;
+        }
+        
+    
+    }
+    @media (width:768px) {
+        #buttonGroup1shipper{
+            font-size: 1.058rem;
+            width: 13.0rem;
+            margin-top: 200px;
+        }
+    }
+
+
+

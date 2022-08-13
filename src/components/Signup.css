@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.SignupModule{
+    
+    width: 95vw;
+    margin-top: 20px;
+    height: 108.5vh;
+   
+}
+.SignupModule h1{
+    
+    width: fit-content;
+    transform: translateX(485px);
+    font-size: 8rem;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    margin-top:110px ;
+   
+}
+.SignupModule form{
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    box-sizing: border-box;
+}
+#name{
+    transform: translateX(0%);
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#password{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+    
+}
+#email{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+
+}
+#phoneNo{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 30px;
+
+}
+#country{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+
+}
+#text1{
+    font-size: 15px;
+ 
+   
+}
+#Submit{
+    width: 200px;
+    padding: 15px 0px;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #0056d5;
+    background-color: #0056d5;
+    color: whitesmoke;
+   
+   
+    font-size: 17px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#Login-Success{
+    font-size: 26px;
+   position: relative;
+   top: 27px;
+ left: 150px;
+    font-weight: 400;
+    color: green;
+    display: none;
+   
+}
+#href-login{
+    color: #0056d5;
+    font-size: 15.75px;
+    font-style: inherit;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+#LabelSignupAs{
+    font-weight: 800;
+    font-style: italic;
+    font-size: 18px;
+   
+    
+
+}
+#NativeSelect{
+    width: 300px;
+    height: 30px;
+    background: none;
+    color: black;
+    font-style: italic;
+    font-weight: bolder;
+    
+}
+.div-select{
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+#Signup-Submit{
+    width: 120px;
+    
+    text-align: center;
+    font-weight: bold;
+
+   
+   
+    font-size: 15px;
+    margin-top: 22px;
+}
+#Signup-Submit:hover{
+    background-color: #0056d5;
+    color: whitesmoke;
+    border-color: #0056d5;
+}
+#NoteForSubscription{
+    font-size: 0.813rem;
+    color: red;
+    font-weight: 500;
+    margin-top: 30px;
+}
+#SecondNoteForSubscription{
+    font-size: 0.813rem;
+    color: red;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+@media (max-width:500px) {
+    html{
+        font-size: 35%;
+    }
+
+    .SignupModule h1{
+        margin-top: 163px;
+        transform: translateX(80px);
+        font-size: 14.5rem;
+    }
+    #name{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 12.125rem;
+    }
+    #password{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    #email{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    #phoneNo{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    #country{
+  width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+    .SignupModule{
+        height: 138.57vh;
+    }
+
+    #Signup-Submit{
+        width: 95px;
+        font-size: 13.25px;
+    }
+    
+}
+@media (max-width:370px){
+    .SignupModule{
+        height: 136.57vh;
+    }
+}
+
+@media (max-width:330px) {
+        html{
+            font-size: 35%;
+        }
+        .SignupModule h1{
+
+            transform: translateX(35px);
+
+        }
+        #NoteForSubscription{
+                font-size: 2.0rem;
+
+}
+#SecondNoteForSubscription{
+    font-size: 2.0rem;
+
+
+
+}
+.SignupModule{
+    height: 158.57vh;
+}
+}
+
+@media (max-width:375px){
+    .SignupModule h1{
+
+        transform: translateX(40px);
+
+    }
+
+
+}
+@media (max-width:410px) {
+
+
+    #NoteForSubscription{
+        font-size: 2.0rem;
+
+}
+#SecondNoteForSubscription{
+font-size: 2.0rem;
+
+
+
+}
+
+}
+
+@media (max-height:750px) {
+
+    .SignupModule{
+        height: 162.57vh;
+    }
+
+
+}
+
+@media (min-width:1500px) {
+    html{
+        font-size: 100%;
+    }    
+    }

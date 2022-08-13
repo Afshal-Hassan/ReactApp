@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#UpdateShipperComponent{
+    height: 85vh;
+}
+
+#UpdateShipperModule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#UpdateShipperModule h1{
+    color: #0056d5;
+    position: relative;
+    bottom: 70px;
+}
+#update-shipper-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Shippername{
+    transform: translateX(0%);
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#Shipperemail{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#ShipperphoneNo{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#Shipperpassword{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#updateShipper-Submit{
+    width: 160px;
+    
+    text-align: center;
+    font-weight: bold;
+
+   
+   
+    font-size: 14px;
+    margin-top: 23px;
+   
+}
+#updateShipper-Submit:hover{
+    background-color: forestgreen;
+    color: whitesmoke;
+    border-color: forestgreen;
+}

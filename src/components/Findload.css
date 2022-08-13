@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.FindLoadModule {
+
+    height: 145vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container h4{
+    color: #0056d5;
+    font-weight: 700;
+}
+ 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#FindLoad-h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    color: #0056d5;
+}
+
+#name {
+    margin-top: 50px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+}
+
+#location {
+    margin-top: 23px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+}
+
+#shipper-name {
+    margin-top: 23px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+
+}
+
+#product-weight {
+    margin-top: 23px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+
+
+}
+
+#time-of-loading {
+    margin-top: 15.5px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+
+}
+
+#label-time-of-loading {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+
+}
+
+#phone-no {
+    margin-top: 23px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+
+
+}
+
+#postLoadForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#shipperEmail {
+    margin-top: 23px;
+    width: 23.125rem;
+    background: transparent;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1.063rem;
+    outline: none;
+    margin-bottom: 1.563rem;
+
+
+
+}
+
+#buttonGroup1 {
+    width: 10.5rem;
+    height: 37px;
+
+    text-align: center;
+    font-weight: bold;
+
+
+
+    font-size: 11px;
+    margin-top: 15px;
+    color: #0056d5;
+    border-color: #0056d5;
+
+}
+#buttonGroup1:hover {
+ background-color:#0056d5;
+ color: whitesmoke;
+
+}
+
+#ButtonGroupAllPost {
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+#buttonGroup1Post {
+    width: 7.5rem;
+
+    text-align: center;
+    font-weight: bold;
+
+
+
+    font-size: 0.938rem;
+    margin-top: 15px;
+
+}
+
+#buttonGroup1Post:hover {
+    background-color: #0056d5;
+    color: whitesmoke;
+}
+
+#buttonLCL {
+    color: forestgreen;
+    width: 11.5rem;
+    height: 37px;
+
+    text-align: center;
+    font-weight: bold;
+
+
+
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+#buttonLCL:hover {
+    background-color: darkorange;
+    color: whitesmoke;
+
+
+}
+
+#link2 {
+    color: darkorange;
+}
+
+#link2:hover {
+
+    color: whitesmoke;
+
+
+}
+
+@media (max-width:31.25rem) {
+    html {
+        font-size: 35%;
+    }
+.container{
+    margin-bottom: 460px;
+}
+    .FindLoadModule{
+        height: 175vh;
+    }
+
+    #FindLoad-h1 {
+        font-size: 13rem;
+    }
+
+    #name {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 12.125rem;
+
+    }
+
+    #location {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+
+    #shipper-name {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+
+    #product-weight {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+
+    #phone-no {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+
+    #shipperEmail {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+
+    #buttonGroup1Post {
+        font-size: 2.638rem;
+        width: 20.5rem;
+        margin-top: 20px;
+    }
+
+    #buttonGroup1 {
+        font-size: 1.958rem;
+        width: 25.5rem;
+        height: 37px;
+       
+
+    }
+
+    #buttonLCL {
+        font-size: 1.958rem;
+        width: 25.5rem;
+        height: 37px;
+       
+
+    }
+
+    #time-of-loading {
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+
+    }
+}
+
+@media (max-height:740px) {
+    html {
+        font-size: 35%;
+    }
+
+    #buttonGroup1 {
+        font-size: 1.958rem;
+        width: 25.5rem;
+        height: 37px;
+        margin-top: 20px;
+
+    }
+
+    #buttonLCL {
+        font-size: 1.958rem;
+        width: 25.5rem;
+        height: 37px;
+        margin-top: 20px;
+
+    }
+}
+@media (max-width:400px){
+    .container{
+        margin-bottom: 50px;
+    }
+} 
+
+@media (max-width:330px) {
+
+    #FindLoad-h1 {
+        font-size: 11rem;
+    }
+    #buttonGroup1 {
+        margin-top: 45px;
+
+
+
+}
+#buttonLCL {
+    margin-top: 45px;
+}
+
+
+}
+@media (min-width:1500px) {
+    html{
+        font-size: 100%;
+    }   
+    
+    #buttonGroup1 {
+        width: 10.5rem;
+        height: 37px;
+    
+        text-align: center;
+        font-weight: bold;
+    
+    
+    
+        font-size: 11px;
+        margin-top: 235px;
+
+    }
+    #buttonLCL {
+        width: 10.5rem;
+    height: 37px;
+
+    text-align: center;
+    font-weight: bold;
+
+
+
+    font-size: 11px;
+    margin-top: 235px;
+}}

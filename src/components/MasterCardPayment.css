@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.Payment{
+    color: black;
+    margin-left: 100px;
+
+}
+h1{
+    font-size: 80px;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    margin-top:110px ;
+}
+#check{
+    display: none;
+   
+    color: forestgreen;
+    font-size: 20px;
+}
+#wait{
+
+    display: none;
+   
+    color: red;
+    font-size: 20px;
+
+}
+#paymentName{
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+
+}
+#paymentEmail{
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#Payment-Submit{
+    width: 200px;
+    padding: 15px 0px;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid #0056d5;
+    background-color: #0056d5;
+    color: whitesmoke;
+   
+   
+    font-size: 17px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}

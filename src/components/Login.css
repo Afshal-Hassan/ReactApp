@@ -1,0 +1,164 @@
+#Login-Module{
+    width: 99vw;
+    margin-top: 10px;
+   
+}
+
+#Login-Module h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    transform: translateX(500px);
+    font-size: 80px;
+    font-weight: 600;
+    font-family: 'Great Vibes', 'cursive';
+    margin-top:210px ;   
+    
+    
+}
+#Login-Module form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    box-sizing: border-box;
+}
+#name-login{
+    transform: translateX(0%);
+    margin-top: 50px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#password-login{
+    transform: translateX(0%);
+    margin-top: 23px;
+    width: 370px;
+    background: transparent;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+    padding-left: 24px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 25px;
+}
+#Submit-Login{
+    width: 200px;
+    
+    text-align: center;
+   
+    
+    
+    border:2px solid #0056d5;
+    background-color: #0056d5;
+    color: whitesmoke;
+   
+   
+    font-size: 17px;
+    margin-top: 20px;
+   
+    cursor: pointer;
+}
+#href-signup{
+    color: #0056d5;
+    font-size: 15.75px;
+    font-style: inherit;
+    font-weight: 500;
+    margin-top: 6px;
+   
+   
+    
+}
+#combo-box-demo{
+    width: 100px;
+    height: 50px;
+}
+#Login-Submit{
+
+    width: 120px;
+    
+    text-align: center;
+    font-weight: bold;
+
+   
+   
+    font-size: 15px;
+    margin-top: 23px;
+   
+    
+
+}
+#Login-Submit:hover{
+   
+    background-color: #0056d5;
+    color: whitesmoke;
+    border-color: #0056d5;
+}
+.progress{
+    display: none;
+}
+
+@media (max-width:31.25rem) {
+    html{
+        font-size: 35%;
+    }
+
+    #Login-Module h1{
+        transform: translateX(18rem);
+    }
+    #name-login{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 12.125rem;
+    }
+    #password-login{
+        width: 40.125rem;
+        height: 8rem;
+        font-size: 2.563rem;
+        padding-left: 2.8rem;
+        margin-top: 6.125rem;
+    }
+
+    #Submit-Login{
+        font-size: 2.638rem;
+        width: 20.5rem;
+        margin-top: 20px;
+    }
+    #Login-Module{
+        height: 100.35vh;
+    }
+    #Login-Submit{
+        width: 95px;
+        font-size: 13.5px;
+    }
+
+}
+@media (max-width:330px) {
+    #Login-Module h1{
+        transform: translateX(10.5rem);
+    }
+
+}
+
+@media (min-width:1500px) {
+    html{
+        font-size: 100%;
+    }    
+
+    #Login-Module h1{
+        transform: translateX(650px);
+    }
+    }

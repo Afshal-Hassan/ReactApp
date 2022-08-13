@@ -1,0 +1,181 @@
+#loadboaded-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#FullContainer{
+    width: 300px;
+    height: 45px;
+    margin-bottom: 45px;
+    color: #0056d5;
+    border:1px solid #0056d5;;
+    border-radius: 6px;
+    transition: 0.5s;
+    position: relative;
+
+}
+#ShareContainer{
+    width: 300px;
+    height: 45px;
+    color: #0056d5;
+    border:1px solid #0056d5;
+    border-radius: 6px;
+    transition: 0.5s;
+    position: relative;
+
+}
+#loadboaded-heading{
+    margin-bottom: 130px;
+    color: #0056d5;
+    font-size: 130px;
+    position: relative;
+}
+#FullContainer:hover{
+   
+    background-color: #0056d5;
+    border: 1px solid #0056d5;
+    color:whitesmoke;
+    top: 5px;
+    left:3px ;
+    
+}
+
+#ShareContainer:hover{
+    background-color: #0056d5;
+    border: 1px solid #0056d5;
+    top: 5px;
+    left:3px ;
+}
+#linked1{
+    color: #0056d5;
+}
+#linked1:hover{
+    color: whitesmoke;
+   
+}
+#linked2{
+    color: #0056d5;
+}
+#linked2:hover{
+    
+    color: whitesmoke;
+    
+}
+#Language{
+    color: #0056d5;
+    margin-bottom: 170px;
+}
+
+#loadboaded-heading::after{
+    content: "";
+    position: absolute;
+    height:100%;
+    width: 130%;
+    background: white;
+    border-left: 2px solid #0056d5;
+    left:0;
+    animation-name: LoadBoadedtyping ;
+    animation-duration: 3.5s;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+@keyframes LoadBoadedtyping  {
+
+    0%{
+        left: 0;
+    }
+    13%{
+        left: 110px;
+    }
+    26%{
+        left: 140px;
+    }
+    39%{
+        left: 180px;
+    }
+    52%{
+        left: 250px;
+    }
+    65%{
+        left: 275px;
+    }
+    78%{
+        left: 330px;
+    }
+    91%{
+        left: 370px;
+    }
+    100%{
+        left: 550px;
+    }
+    
+}
+
+@media (max-width:500px) {
+    #loadboaded-heading{
+        font-size: 70px;
+        margin-bottom: 110px;
+        margin-top: 220px;
+    }
+    #loadboaded-component{
+        height: 69vh;
+    }
+
+    #FullContainer{
+        width: 200px;
+        height: 35px;
+        color: #0056d5;
+        border:1px solid #0056d5;;
+        border-radius: 6px;
+        transition: 0.5s;
+        position: relative;
+        font-size: 11px;
+
+    }
+    #ShareContainer{
+        width: 200px;
+        height: 35px;
+        color: #0056d5;
+        border:1px solid #0056d5;;
+        border-radius: 6px;
+        transition: 0.5s;
+        position: relative;
+        font-size: 11px;
+
+    }
+    #loadboaded-heading::after{
+        content: "";
+        position: absolute;
+        height:0%;
+        width: 0%;
+        background: white;
+        left:0;
+        animation-name: LoadBoaded ;
+        animation-duration: 3.5s;
+        animation-timing-function:ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+    }
+
+    #Language{
+        font-size: 60px;
+    }
+    
+  
+    
+}
+
+@media (max-width:390px) {
+
+    #Language{
+        font-size: 40px;
+    }
+
+}
