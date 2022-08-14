@@ -26,7 +26,7 @@ export default function Signup() {
 
     const history = useHistory();
     useEffect(() => {
-        axios.get('http://localhost:8080/token',{
+        axios.get('https://spring-boot-deployed.herokuapp.com/token',{
             headers: {"Access-Control-Allow-Origin": "http://localhost:3000" ,
                 "Content-Type": "X-Auth-Token",
                 "Access-Control-Allow-Methods":" GET, POST, PATCH, PUT, DELETE"
@@ -51,7 +51,7 @@ export default function Signup() {
 
     const [status, setStatus] = useState("null");
     const [email, setEmail] = useState("");
-    const url = `http://localhost:8080/signup/${email}`;
+    const url = `https://spring-boot-deployed.herokuapp.com/signup/${email}`;
     const [country, setCountry] = useState("");
     const [name, setName] = useState("");
 
