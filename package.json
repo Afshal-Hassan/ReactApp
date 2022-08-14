@@ -35,13 +35,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
     "react-router-outlet": "^0.2.4",
+    "react-scripts": "^5.0.1",
     "react-stripe-checkout": "^2.6.3",
     "react-switch": "^7.0.0",
     "react-tap-event-plugin": "^1.0.0",
     "react-toastify": "^9.0.7",
     "react-whatsapp": "^0.3.0",
     "reactstrap": "^9.1.2",
-    "react-scripts": "^5.0.1",
     "remove-node-modules": "^1.7.6",
     "styled-components": "^5.3.5",
     "svgo": "^2.8.0",
@@ -52,9 +52,6 @@
   "engines": {
     "node": "16.15.0",
     "npm": "8.5.5"
-  },
-  "devDependencies": {
-    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
