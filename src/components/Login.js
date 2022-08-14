@@ -16,8 +16,8 @@ export default function Login() {
     const history = useHistory();
     const [emailLogin, setLoginEmail] = useState();
     const [passwordLogin, setLoginPassword] = useState();
-    const url = `http://localhost:8080/dosignin`;
-    const url2 = `http://localhost:8080/loginData/${emailLogin}`;
+    const url = `https://spring-boot-deployed.herokuapp.com/dosignin`;
+    const url2 = `https://spring-boot-deployed.herokuapp.com/loginData/${emailLogin}`;
 
     var bodyform = new FormData();
     bodyform.append("email", emailLogin);
