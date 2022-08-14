@@ -8,10 +8,8 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
-    "@mui/material": "^5.10.0",
     "@mui/styled-engine": "^5.10.0",
     "@mui/styled-engine-sc": "^5.8.0",
-    "@mui/system": "^5.10.0",
     "@stripe/react-stripe-js": "github:stripe/stripe-js",
     "@svgr/webpack": "^6.3.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -50,6 +48,10 @@
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@mui/material": "^5.10.0",
+    "@mui/system": "^5.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
