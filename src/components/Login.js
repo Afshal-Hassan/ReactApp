@@ -16,7 +16,7 @@ export default function Login() {
     const history = useHistory();
     const [emailLogin, setLoginEmail] = useState();
     const [passwordLogin, setLoginPassword] = useState();
-    const url = `https://spring-boot-deployed.herokuapp.com/dosignin`;
+    const url = `https://spring-boot-deployed.herokuapp.com/logincheck`;
     const url2 = `https://spring-boot-deployed.herokuapp.com/loginData/${emailLogin}`;
 
     var bodyform = new FormData();
@@ -187,7 +187,7 @@ export default function Login() {
                         localStorage.setItem("Subscription Date", res.data[2]);
                     })
 
-                    if (res.status == 200) {
+                    if (res.data == "Success") {
                         tempStatus = "success";
                         setStatus(tempStatus);
                         toast.success("Successfully Logged In", {
@@ -203,14 +203,25 @@ export default function Login() {
                             window.location.href = "/getallpostload";
                         }, 2000);
                     }
+                    else{
+                        toast.error("Enter correct Email or Password", {
+                            position: "top-right"
+                        })
+                    }
 
 
 
 
 
                 }).catch((err) => {
-                    toast.error("Enter correct Email or Password", {
+                    toast.error("Request Failed", {
                         position: "top-right"
+                    })
+                    toast.info("Might be some problems from server",{
+                        position:"top-right"
+                    })
+                    toast.warn("You can check your Email and Password",{
+                        position:"top-right"
                     })
                 })
 
