@@ -38,45 +38,45 @@ current = year + "-" + +"0"+month + "-" + day;
     const history = useHistory();
     const url = `http://localhost:8080/postload/${phoneNo}/${pointOfDelivery}/${pointOfLoading}/${productWeight}/${timeOfLoading}/${vehicle}/${shipperEmail}/${current}/${dateOfUploading}`;
 
-    useEffect(() => {
+    // useEffect(() => {
         
-          if (localStorage.getItem('email')) {
-           if (localStorage.getItem("userType") == "Broker" || localStorage.getItem("userType") == "Transporter") {
-            let subscriptionDate1 = localStorage.getItem("Subscription Date");
+    //       if (localStorage.getItem('email')) {
+    //        if (localStorage.getItem("userType") == "Broker" || localStorage.getItem("userType") == "Transporter") {
+    //         let subscriptionDate1 = localStorage.getItem("Subscription Date");
 
-           var currentDate = new Date(current);
-          var SubscriptionDate2 = new Date(subscriptionDate1);
-
-
+    //        var currentDate = new Date(current);
+    //       var SubscriptionDate2 = new Date(subscriptionDate1);
 
 
-            var Difference_In_Time = currentDate.getTime() - SubscriptionDate2.getTime();
+
+
+    //         var Difference_In_Time = currentDate.getTime() - SubscriptionDate2.getTime();
 
      
-           var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-            if (Difference_In_Days > 30) {
-               console.log("Yes Over");
-               history.push('./login');
-           }
-           else {
-               history.push('./postload');
-          }
+    //        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    //         if (Difference_In_Days > 30) {
+    //            console.log("Yes Over");
+    //            history.push('./login');
+    //        }
+    //        else {
+    //            history.push('./postload');
+    //       }
 
 
 
-         }
-         else {
-          history.push('./postload');
-          }
+    //      }
+    //      else {
+    //       history.push('./postload');
+    //       }
 
 
 
-          }
-          else {
-          history.push('./login');
+    //       }
+    //       else {
+    //       history.push('./login');
 
-         }
-    }, [])
+    //      }
+    // }, [])
 
 
     const onchangeDateOfUploading = (event) => {

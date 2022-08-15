@@ -401,3 +401,14 @@
     font-size: 11px;
     margin-top: 235px;
 }}
+
+@media (height:613px) {
+    
+    .FindLoadModule{
+        height: 230vh;
+    }
+    #FindLoad-h1 {
+        font-size: 10rem;
+    }
+
+}
