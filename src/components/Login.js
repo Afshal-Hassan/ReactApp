@@ -176,15 +176,15 @@ export default function Login() {
             let name = document.getElementById("name-login").value;
             let password = document.getElementById("password-login").value
 
-            axios.post(url,{
-                email:emailLogin,
-                password:passwordLogin
-            },{
-                headers:{
+            axios.post(url, {
+                email: emailLogin,
+                password: passwordLogin
+            }, {
+                headers: {
                     "Access-Control-Allow-Origin": "https://react-app-first-version.herokuapp.com"
                 }
             }
-                
+
             )
                 .then((res) => {
                     axios.get(url2).then((res) => {
@@ -194,13 +194,7 @@ export default function Login() {
                         localStorage.setItem("Subscription Date", res.data[2]);
                     })
 
-                    if (res.status == 401) {
-                        toast.error("Enter correct Email or Password", {
-                            position: "top-right"
-                        })
-                       
-                    }
-                    else if(res.data == "Success"){
+                    if (res.data == "Success") {
                         tempStatus = "success";
                         setStatus(tempStatus);
                         toast.success("Successfully Logged In", {
@@ -215,28 +209,17 @@ export default function Login() {
                         setTimeout(function () {
                             window.location.href = "/getallpostload";
                         }, 2000);
-                       
+
+
+
+
                     }
-
-
-
-
-
-                }).catch((err) => {
-
-                    toast.error("Request Failed", {
-                        position: "top-right"
-                    })
-                    toast.info("Might be some problems from server",{
-                        position:"top-right"
-                    })
-                    toast.warn("You can check your Email and Password",{
-                        position:"top-right"
-                    })
-                
+                    else {
+                        toast.error("Enter correct Email or Password", {
+                            position: "top-right"
+                        })
+                    }
                 })
-
-
         }
     }
     return (
