@@ -339,7 +339,7 @@ export default function Signup() {
                 signUpDate: signupDate
 
             },{
-                headers: {"Access-Control-Allow-Origin": "http://localhost:3000" 
+                headers: {"Access-Control-Allow-Origin": "https://react-app-first-version.herokuapp.com" 
                 
                 
             }

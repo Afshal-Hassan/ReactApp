@@ -176,9 +176,16 @@ export default function Login() {
             let name = document.getElementById("name-login").value;
             let password = document.getElementById("password-login").value
 
-            axios.post(url, bodyform, {
-                headers: { "Content-Type": "multipart/form-data" }
-            })
+            axios.post(url,{
+                email:emailLogin,
+                password:passwordLogin
+            },{
+                headers:{
+                    "Access-Control-Allow-Origin": "https://react-app-first-version.herokuapp.com"
+                }
+            }
+                
+            )
                 .then((res) => {
                     axios.get(url2).then((res) => {
                         console.log(res);
