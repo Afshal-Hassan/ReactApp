@@ -210,7 +210,7 @@ export default function Login() {
                             window.location.href = "/getallpostload";
                         }, 2000);
                     }
-                    else{
+                    else if(res.status==401){
                         toast.error("Enter correct Email or Password", {
                             position: "top-right"
                         })
@@ -221,6 +221,14 @@ export default function Login() {
 
 
                 }).catch((err) => {
+
+                    if(res.status==401){
+                        toast.error("Enter correct Email or Password", {
+                            position: "top-right"
+                        })
+
+                    }
+                    else{
                     toast.error("Request Failed", {
                         position: "top-right"
                     })
@@ -230,6 +238,7 @@ export default function Login() {
                     toast.warn("You can check your Email and Password",{
                         position:"top-right"
                     })
+                }
                 })
 
 
