@@ -194,7 +194,13 @@ export default function Login() {
                         localStorage.setItem("Subscription Date", res.data[2]);
                     })
 
-                    if (res.data == "Success") {
+                    if (res.status == 401) {
+                        toast.error("Enter correct Email or Password", {
+                            position: "top-right"
+                        })
+                       
+                    }
+                    else if(res.data == "Success"){
                         tempStatus = "success";
                         setStatus(tempStatus);
                         toast.success("Successfully Logged In", {
@@ -209,11 +215,7 @@ export default function Login() {
                         setTimeout(function () {
                             window.location.href = "/getallpostload";
                         }, 2000);
-                    }
-                    else if(res.status==401){
-                        toast.error("Enter correct Email or Password", {
-                            position: "top-right"
-                        })
+                       
                     }
 
 
@@ -222,13 +224,6 @@ export default function Login() {
 
                 }).catch((err) => {
 
-                    if(res.status==401){
-                        toast.error("Enter correct Email or Password", {
-                            position: "top-right"
-                        })
-
-                    }
-                    else{
                     toast.error("Request Failed", {
                         position: "top-right"
                     })
@@ -238,7 +233,7 @@ export default function Login() {
                     toast.warn("You can check your Email and Password",{
                         position:"top-right"
                     })
-                }
+                
                 })
 
 

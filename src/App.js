@@ -53,8 +53,8 @@ function App() {
       <Route exact path='/aboutus' component={Aboutus}><Navbar/><Aboutus/></Route>
       <Route exact path='/termsandconditions' component={TermsAndConditions}><Navbar/><TermsAndConditions/></Route>
       <Route exact path='/postload' component={Findload}><PostLoadNavBar/><Findload/></Route>
-      <Route exact path='/getallpostload' component={GetAllPostLoad}><PostLoadNavBar/><GetAllPostLoad/></Route>
-      <Route  path='/sharecontainerloads' component={Shipper}><PostLoadNavBar/><Shipper/></Route>
+      <Route exact path='/getallpostload' component={GetAllPostLoad}><NavBar/><GetAllPostLoad/></Route>
+      <Route  path='/sharecontainerloads' component={Shipper}><NavBar/><Shipper/></Route>
       <Route exact path='/payment' component={MasterVisaCard}><MasterVisaCard/></Route>
       <Route exact path='/sharecontainer' component={ShareAContainer}><PostLoadNavBar/><ShareAContainer/></Route>
       <Route exact path='/matchedcontainers' component={MatchedContainers}><PostLoadNavBar/><MatchedContainers/></Route>
