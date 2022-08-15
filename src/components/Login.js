@@ -214,11 +214,10 @@ export default function Login() {
 
 
                     }
-                    else {
-                        toast.error("Enter correct Email or Password", {
-                            position: "top-right"
-                        })
-                    }
+                }).catch((error) => {
+                    toast.error("Enter correct Email or Password", {
+                        position: "top-right"
+                    })
                 })
         }
     }
