@@ -39,7 +39,7 @@ export default function GetAllPostLoad() {
   
     for (var i = 0; i < allpostloads.length; i++) {
       let postloads = allpostloads.slice(i, i + 1);
-      let containerdiv;
+      let containerdiv= document.createElement("div");
 
       const div = document.createElement("div");
       let para;
@@ -104,7 +104,7 @@ export default function GetAllPostLoad() {
           label = "Date"
         }
         if (keys[j] == "dateOfUploading") {
-          label="Date Of Uploading";
+          label="Date Of Loading";
         }
         if (keys[j] == "productWeight") {
           const mediaQuerys = window.matchMedia('(max-width: 500px)')
@@ -128,7 +128,7 @@ export default function GetAllPostLoad() {
           }
           const mediaQuerys = window.matchMedia('(max-width: 500px)')
 
-          label = "Phone No (Carrier/Broker)"
+          label = "Phone No (Uploader)"
           img = document.createElement("span");
           img.className = "material-symbols-outlined";
           img.innerHTML = "call";
@@ -141,8 +141,38 @@ export default function GetAllPostLoad() {
           containerdiv.appendChild(img)
         }
         if (keys[j] == "userData") {
-          continue;
-        }
+          if(!localStorage.getItem("email")){
+            continue;
+          }
+          label="Uploader Email"
+          
+         values=values[j].email;
+         console.log(values);
+         const mediaQuerys = window.matchMedia('(max-width: 500px)')
+         containerdiv = document.createElement("div");
+         para = document.createElement("div");
+         para.innerHTML = `${label}: ${values}`;
+         para.style.cssText = "font-size:18px;font-weight:630;color:black;margin-bottom:15px;"
+ 
+         if (mediaQuerys.matches) {
+           para.style.cssText = "font-size:13px;font-weight:630;color:black;margin-bottom:15px;"
+         }
+      
+        
+ 
+ 
+         containerdiv.appendChild(para);
+         containerdiv.style.cssText = "display:flex;flex-direction:row;position:relative;margin-bottom:30px; margin-top:25px; align-items: center;justify-content:flex-start;margin-left:15px"
+         if (mediaQuerys.matches) {
+           containerdiv.style.cssText = "display:flex;flex-direction:row;position:relative;margin-bottom:10px; margin-top:10px; align-items: center;justify-content:flex-start;margin-left:15px"
+ 
+         }
+         
+         div.appendChild(containerdiv);
+         continue;}
+        
+      
+        
         if(keys[j]=="time"){
           continue
         }
@@ -184,23 +214,23 @@ export default function GetAllPostLoad() {
       callDiv.appendChild(callimg);
       callDiv.appendChild(link);
    
-      div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:570px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+      div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:650px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
       if(!localStorage.getItem("email")){
         div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:510px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
 
       }
       if (mediaQuery.matches) {
-        div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:370px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+        div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:410px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
         callDiv.style.cssText = "position:relative;width:106px;;display:flex;justify-content: space-between;margin-top:20px"
         if(!localStorage.getItem("email")){
-          div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:320px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+          div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:330px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
 
         }
       }
 
       document.getElementById("allPostLoads").appendChild(div);
       div.appendChild(callDiv)
-      document.getElementById("all-postload-component").style.height = 163 + "vh"
+      document.getElementById("all-postload-component").style.height = 167 + "vh"
 
     }
 

@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import { Button } from "@mui/material";
 import { Link } from 'react-router-dom';
+import {ButtonGroup} from '@mui/material';
 
 export default function GetAllPostLoad() {
 
@@ -22,7 +23,7 @@ export default function GetAllPostLoad() {
         position: "top-right"
       })
       toast.info("Might be some problem from server",{
-        position:"top-right"
+        position:'top-right'
       })
     })
 
@@ -38,7 +39,7 @@ export default function GetAllPostLoad() {
   
     for (var i = 0; i < allpostloads.length; i++) {
       let postloads = allpostloads.slice(i, i + 1);
-      let containerdiv;
+      let containerdiv= document.createElement("div");
 
       const div = document.createElement("div");
       let para;
@@ -102,10 +103,13 @@ export default function GetAllPostLoad() {
         if (keys[j] == "date1") {
           label = "Date"
         }
+        if (keys[j] == "dateOfUploading") {
+          label="Date Of Loading";
+        }
         if (keys[j] == "productWeight") {
           const mediaQuerys = window.matchMedia('(max-width: 500px)')
 
-          label = "Product Weight"
+          label = "Product Weight (KG)"
           img = document.createElement("span");
           img.className = "material-symbols-outlined";
           img.innerHTML = "line_weight";
@@ -117,10 +121,14 @@ export default function GetAllPostLoad() {
           }
           containerdiv.appendChild(img)
         }
+
         if (keys[j] == "phoneNo") {
+          if(!localStorage.getItem("email")){
+            continue;
+          }
           const mediaQuerys = window.matchMedia('(max-width: 500px)')
 
-          label = "Phone No (Carrier/Broker)"
+          label = "Phone No (Uploader)"
           img = document.createElement("span");
           img.className = "material-symbols-outlined";
           img.innerHTML = "call";
@@ -133,10 +141,40 @@ export default function GetAllPostLoad() {
           containerdiv.appendChild(img)
         }
         if (keys[j] == "userData") {
-          continue;
-        }
-        if (keys[j] == "time") {
-          continue;
+          if(!localStorage.getItem("email")){
+            continue;
+          }
+          label="Uploader Email"
+          
+         values=values[j].email;
+         console.log(values);
+         const mediaQuerys = window.matchMedia('(max-width: 500px)')
+         containerdiv = document.createElement("div");
+         para = document.createElement("div");
+         para.innerHTML = `${label}: ${values}`;
+         para.style.cssText = "font-size:18px;font-weight:630;color:black;margin-bottom:15px;"
+ 
+         if (mediaQuerys.matches) {
+           para.style.cssText = "font-size:13px;font-weight:630;color:black;margin-bottom:15px;"
+         }
+      
+        
+ 
+ 
+         containerdiv.appendChild(para);
+         containerdiv.style.cssText = "display:flex;flex-direction:row;position:relative;margin-bottom:30px; margin-top:25px; align-items: center;justify-content:flex-start;margin-left:15px"
+         if (mediaQuerys.matches) {
+           containerdiv.style.cssText = "display:flex;flex-direction:row;position:relative;margin-bottom:10px; margin-top:10px; align-items: center;justify-content:flex-start;margin-left:15px"
+ 
+         }
+         
+         div.appendChild(containerdiv);
+         continue;}
+        
+      
+        
+        if(keys[j]=="time"){
+          continue
         }
         const mediaQuerys = window.matchMedia('(max-width: 500px)')
         containerdiv = document.createElement("div");
@@ -161,26 +199,38 @@ export default function GetAllPostLoad() {
 
       const mediaQuery = window.matchMedia('(max-width: 500px)')
 
+
+
       const callDiv = document.createElement("div");
-      callDiv.style.cssText = "position:relative;width:60px;;margin-bottom:35px;display:flex;justify-content: space-between;"
+      callDiv.style.cssText = "position:relative;width:120px;;display:flex;justify-content: space-between;"
       let callimg = document.createElement("span");
       callimg.className = "material-symbols-outlined";
       callimg.innerHTML = "call";
       callimg.style.cssText = "position:relative;color:forestgreen;"
       link = document.createElement("a");
-      link.innerHTML = "Call"
+      link.innerHTML = "Whatsapp";
       link.href = "https://web.whatsapp.com";
       link.style.cssText = "color:forestgreen;font-size:15.5px;font-weight:670;"
       callDiv.appendChild(callimg);
       callDiv.appendChild(link);
-      div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:510px;border-radius:25px;background-color: #D3D3D3;margin-top:50px";
-      if (mediaQuery.matches) {
-        div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:330px;border-radius:25px;background-color: #D3D3D3;margin-top:50px";
+   
+      div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:650px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+      if(!localStorage.getItem("email")){
+        div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:800px;height:510px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
 
       }
-      div.appendChild(callDiv)
+      if (mediaQuery.matches) {
+        div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:410px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+        callDiv.style.cssText = "position:relative;width:106px;;display:flex;justify-content: space-between;margin-top:20px"
+        if(!localStorage.getItem("email")){
+          div.style.cssText = "display: block;flex-direction: column; align-items: center;justify-content: center; border:5px double grey;width:300px;height:330px;border-radius:25px;background-color: #D3D3D3;margin-top:90px";
+
+        }
+      }
+
       document.getElementById("allPostLoads").appendChild(div);
-      document.getElementById("all-postload-component").style.height = 150 + "vh"
+      div.appendChild(callDiv)
+      document.getElementById("all-postload-component").style.height = 167 + "vh"
 
     }
 
@@ -188,9 +238,19 @@ export default function GetAllPostLoad() {
 
   return (
     <div id='all-postload-component'>
-      <Button value="Submit" variant="outlined" color="primary" id="Filter"><Link to="/filter" id='filter'>Filter</Link></Button>
+       
+      <Button value="Submit" variant="outlined" color="primary" id="Filter"><Link to="/filter" id='filter'>منقي</Link></Button>
       <div id='all-postload-module'>
-        <h1 id='GetPostLoadh1'>احصل على كل ما بعد التحميل</h1>
+      <ButtonGroup variant="outlined" aria-label="outlined button group" id="ButtonGroupAllPost">
+                    <Button id='buttonGroup1'color='primary' variant='outlined'><Link to="/sharecontainerloads-arabic" id='link1'>مشاركة الحاوية
+</Link></Button>
+                    <Button id='buttonGroup1'color='primary' variant='outlined'><Link to="/getallpostload-arabic" id='link1'>حاوية كاملة</Link></Button>
+                    </ButtonGroup>
+        <h1 id='GetPostLoadh1'>تحميل</h1>
+        <h5>لنشر تحميل تحتاج إلى تسجيل الدخول
+</h5>
+        <h5>للاتصال بـ PostLoader تحتاج إلى تسجيل الدخول
+</h5>
         <div id='allPostLoads'>
           
         </div>

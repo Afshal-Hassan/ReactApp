@@ -69,7 +69,7 @@ function App() {
       <Route exact path='/matchedcontainers-arabic' component={MatchedContainersArabic}><PostLoadNavBarArabic/><MatchedContainersArabic/></Route>
       <Route exact path='/contact-arabic' component={ContactArabic}><NavbarArabic/><ContactArabic/></Route>
       <Route exact path='/payment-arabic' component={PaymentArabic}><PaymentArabic/></Route>
-      <Route exact path='/shipper-arabic' component={ShipperArabic}><PostLoadNavBarArabic/><ShipperArabic/></Route>
+      <Route exact path='/sharecontainerloads-arabic' component={ShipperArabic}><PostLoadNavBarArabic/><ShipperArabic/></Route>
       <Route exact path='/loadedboarded-arabic' component={LoadboadedArabic}><PostLoadNavBarArabic/><LoadboadedArabic/></Route>
 
 

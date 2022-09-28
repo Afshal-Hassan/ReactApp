@@ -23,13 +23,21 @@ export default function Navbar() {
             <div>
                 <ul className='ul-nav'>
                     <li className='item' >
-                        <Link to='/arabic' >صفحة رئيسية</Link>
+                        <Link to='/home-arabic' >مسكن
+</Link>
                     </li>
-                    <li className='item'><Link to="/contact-arabic" >الاتصال</Link></li>
-                    <li className='item'><Link to="/payment-arabic" >دفع</Link></li>
+                    <li className='item'><Link to="/getallpostload-arabic" >تحميل</Link></li>
+                    <li className='item' >
+                        <Link to='/postload-arabic' >PostLoad</Link>
+                    </li>
+                    <li className='item'><Link to="/contact-arabic" >اتصال</Link></li>
+                    <li className='item'><Link to="/payment" >دفع
+</Link></li>
 
-                    <li className='item'><Link to='/aboutus' >من نحن</Link></li>
-                    <li className='item'><Link to='/termsandconditions' >الشروط والأحكام</Link></li>
+                    <li className='item'><Link to='/aboutus' >معلومات عنا
+</Link></li>
+                    <li className='item'><Link to='/termsandconditions' >الأحكام والشروط
+</Link></li>
                 </ul>
             </div>
         </div>

@@ -91,7 +91,7 @@ export default function Shipper() {
                     label="Phone No";
                 }
                 if(j==6){
-                    label="Date Of Uploading";
+                    label="Date Of Loading";
                 }
                 para=document.createElement("div");
                 para.style.cssText="font-size:17px;font-weight:600;color:black;margin-bottom:20px;margin-left:25px"
@@ -162,6 +162,7 @@ export default function Shipper() {
                     <Button id='buttonGroup1'color='primary' variant='outlined'><Link to="/getallpostload" id='link1'>Full Container</Link></Button>
                     </ButtonGroup>
                     <h1 id='Shipper-h1'>Share Container Loads</h1>
+                    <h5 id='he'>For Uploader Email you can contact us</h5>
                     <div id='searchedLCL'></div>
 
                 </div>

@@ -51,13 +51,19 @@ export default function Signup() {
 
     const [status, setStatus] = useState("null");
     const [email, setEmail] = useState("");
-    const url = `https://spring-boot-deployed.herokuapp.com/signup/${email}`;
+    const url = `http://localhost:8080/signup/${email}`;
     const [country, setCountry] = useState("");
     const [name, setName] = useState("");
 
     const [password, setPassword] = useState("");
     const [phoneNo, setPhoneNo] = useState("");
     const [typeOfSignup, setTypeOfSignup] = useState("Transporter");
+    const [select, setSelect] = useState("+92");
+    const[phoneNoCustom,setCustomPhoneNo]=useState();
+
+    const onchangePhoneNoCustom=(event)=>{
+        setCustomPhoneNo(event.target.value)
+    }
 
 
     const onchangeText = (event) => {
@@ -175,6 +181,9 @@ export default function Signup() {
 
 
         }
+    }
+    const onchangeSelect = (event) => {
+        setSelect(event.target.value);
     }
     const onchangeEmail = (event) => {
         setEmail(event.target.value);
@@ -334,7 +343,7 @@ export default function Signup() {
                 email: email,
                 password: password,
                 country: country,
-                phoneNo: phoneNo,
+                phoneNo: select+phoneNo,
                 userType: typeOfSignup,
                 signUpDate: signupDate
 
@@ -391,17 +400,66 @@ export default function Signup() {
             
 
             <form id="SignUpForm">
-            <div id="NoteForSubscription">If you Signup as Carrier you have to pay 3$ monthly</div>
-            <div id="SecondNoteForSubscription">If you Signup as Broker you have to pay 2$ monthly</div>
-            <div id="SecondNoteForSubscription">Free for Shipper</div>
+         {/*   <div id="NoteForSubscription">If you Signup as Transporter you have to pay 3$ monthly</div>
+            <div id="SecondNoteForSubscription">If you Signup as Broker you have to pay 3$ monthly</div>
+    <div id="SecondNoteForSubscription">Free for Shipper</div>*/}
 
 
                 <input type="text" placeholder="Name" name="Name" id="name" value={name} onChange={onchangeName} />
                 <input type="email" placeholder="Email" name="Email" id="email" value={email} onChange={onchangeEmail} />
                 <input type="password" placeholder="Password" name="Password" id="password" value={password} onChange={onchangePassword} />
                 <input type="text" value={country} placeholder="Country" id="country" onChange={onchangeText} />
-                <input type="tel" placeholder="Phone No:" name="PhoneNumbers" onChange={onchangePhoneNo} id="phoneNo" value={phoneNo} />
-                <div className="div-select">
+                <div id='phoneNumber'>
+                <NativeSelect
+                  
+                  id="NativeSelectphoneNo" 
+                  value={select}
+                  onChange={onchangeSelect}
+              >
+                         <option value="+92">+92 (Pakistan)</option>
+                     <option value="+91">+91 (India)</option>
+                     <option value="+93">+93 (Afghanistan)</option>
+                     <option value="+61">+61 (Australia)</option>
+                     <option value="+994">+994 (Azerbaijan)</option>
+                     <option value="+880">+880 (Bangladesh)</option>
+                     <option value="+55">+55 (Brazil)</option>
+                     <option value="+1">+1 (Canada)</option>
+                     <option value="+86">+86 (China)</option>
+                     <option value="+33">+33 (France)</option>
+                     <option value="+49">+49 (Germany)</option>
+                     <option value="+30">+30 (Greece)</option>
+                     <option value="+62">+62 (Indonesia)</option>
+                     <option value="+98">+98 (Iran)</option>
+                     <option value="+964">+964 (Iraq)</option>
+                     <option value="+966">+966 (Saudia Arabia)</option>
+                     <option value="+363">+363 (Ireland)</option>
+                     <option value="+39">+39 (Italy)</option>
+                     <option value="+81">+81 (Japan)</option>
+                     <option value="+965">+965 (Kuwait)</option>
+                     <option value="+60">+60 (Malaysia)</option>
+                     <option value="+230">+230 (Mauritius)</option>
+                     <option value="+52">+52 (Mexico)</option>
+                     <option value="+977">+977 (Nepal)</option>
+                     <option value="+850">+850 (North Korea)</option>
+                     <option value="+48">+48 (Poland)</option>
+                     <option value="+974">+974 (Qatar)</option>
+                     <option value="+1">+1 (USA)</option>
+                     <option value="+44">+44 (UK)</option>
+                     <option value="+971">+971 (UAE)</option>
+                     <option value="+20">+20 (Egypt)</option>
+                     <option value="+968">+968 (Oman)</option>
+                     <option value="+973">+973 (Bahrain)</option>
+                     <option value="+961">+961 (Lebanon)</option>
+                     <option value="+963">+963 (Syria)</option>
+                     <option value="+962">+962 (Jordan)</option>
+                     <option value="+218">+218 (Libya)</option>
+                     <option value="+90">+90 (Turkey)</option>
+                     <option value="+64">+64 (NZ)</option>
+              </NativeSelect>
+                <input type="tel" placeholder="Phone No:" name="PhoneNumbers" onChange={onchangePhoneNo} id="phoneNo" value={phoneNo} /></div>
+                <input type="tel" placeholder="(Optional) Custom Phone No:  " name="PhoneNumbers" onChange={onchangePhoneNoCustom} id="phoneNo" value={phoneNoCustom} />
+
+            {/*    <div className="div-select">
                     <InputLabel htmlFor="select" id="LabelSignupAs">Signup As</InputLabel>
                     <NativeSelect
                         value={typeOfSignup}
@@ -413,7 +471,7 @@ export default function Signup() {
                         <option value="Broker">Broker</option>
                     </NativeSelect>
 
-                </div>
+    </div>*/}
                 
                 <Link to="/login" id="href-login">Login?</Link>
                 <Button value="Submit" onClick={SubmtHandler} variant="outlined" color="primary" id="Signup-Submit" disabled={disabledValue}>SignUp</Button>            

@@ -69,12 +69,12 @@ export default function Login() {
 
                 }
                 else {
-                    history.push('./postload');
+                    history.push('./postload-arabic');
                 }
 
             }
             else {
-                history.push('./postload');
+                history.push('./postload-arabic');
             }
 
         }
@@ -200,7 +200,7 @@ export default function Login() {
                             document.getElementById("loader").style.cssText = "display:none";
                         }, 1800);
                         setTimeout(function () {
-                            window.location.href = "/loadboarded-arabic";
+                            window.location.href = "/getallpostload-arabic";
                         }, 1600);
                     }
 

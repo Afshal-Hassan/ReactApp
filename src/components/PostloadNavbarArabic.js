@@ -23,15 +23,20 @@ const LogoutHandler=(e)=>{
             </div>
             <div>
                 <ul className='ul-nav'>
-                    <li className='item' >
-                        <Link to='/postload-arabic' >ما بعد التحميل</Link>
+                <li className='item' >
+                        <Link to='/home-arabic' >مسكن</Link>
                     </li>
-                    <li className='item'><Link to="/shipper-arabic" >الشاحن</Link></li>
-                    <li className='item'><Link to="/payment-arabic" >دفع</Link></li>
-
-                    <li className='item'><Link to='/aboutus' >من نحن</Link></li>
-                    <li className='item'><Link to='/termsandconditions' >الشروط والأحكام</Link></li>
-                    <Button value="Submit" variant="outlined" type="submit" color="primary" id="Logout-Submit"  onClick={LogoutHandler}>الخروج</Button>
+                <li className='item'><Link to="/getallpostload-arabic" >تحميل</Link></li>
+                    <li className='item' >
+                        <Link to='/postload-arabic' >PostLoad</Link>
+                    </li>
+                    <li className='item'><Link to="/payment" >دفع
+</Link></li>
+                    <li className='item'><Link to='/aboutus' >معلومات عنا
+</Link></li>
+                    <li className='item'><Link to='/termsandconditions' >الأحكام والشروط
+</Link></li>
+                    <Button value="Submit" variant="outlined" type="submit" color="primary" id="Logout-Submit"  onClick={LogoutHandler}>Logout</Button>
 
 
                     

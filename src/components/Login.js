@@ -16,8 +16,8 @@ export default function Login() {
     const history = useHistory();
     const [emailLogin, setLoginEmail] = useState();
     const [passwordLogin, setLoginPassword] = useState();
-    const url = `https://spring-boot-deployed.herokuapp.com/logincheck`;
-    const url2 = `https://spring-boot-deployed.herokuapp.com/loginData/${emailLogin}`;
+    const url = `http://localhost:8080/dosignin`;
+    const url2 = `http://localhost:8080/loginData/${emailLogin}`;
 
     var bodyform = new FormData();
     bodyform.append("email", emailLogin);
@@ -176,12 +176,11 @@ export default function Login() {
             let name = document.getElementById("name-login").value;
             let password = document.getElementById("password-login").value
 
-            axios.post(url, {
-                email: emailLogin,
-                password: passwordLogin
+            axios.post(url,bodyform, {
+               
             }, {
                 headers: {
-                    "Access-Control-Allow-Origin": "https://react-app-first-version.herokuapp.com"
+                    "Access-Control-Allow-Origin": "https://localhost:3000"
                 }
             }
 
@@ -194,7 +193,7 @@ export default function Login() {
                         localStorage.setItem("Subscription Date", res.data[2]);
                     })
 
-                    if (res.data == "Success") {
+                    if (res.data == "Success" || res.status==200) {
                         tempStatus = "success";
                         setStatus(tempStatus);
                         toast.success("Successfully Logged In", {

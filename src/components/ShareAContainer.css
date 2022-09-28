@@ -13,6 +13,9 @@
     justify-content: center;
     align-items: center;
 }
+#share{
+    margin-right: 70px;
+}
 #shareModule h1{
     color: #0056d5;
     margin-bottom: 20px;

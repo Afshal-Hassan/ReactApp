@@ -26,7 +26,7 @@ export default function Signup() {
 
     const history = useHistory();
     useEffect(() => {
-        axios.get('http://localhost:8080/token',{
+        axios.get('https://spring-boot-deployed.herokuapp.com/token',{
             headers: {"Access-Control-Allow-Origin": "http://localhost:3000" ,
                 "Content-Type": "X-Auth-Token",
                 "Access-Control-Allow-Methods":" GET, POST, PATCH, PUT, DELETE"
@@ -43,7 +43,7 @@ export default function Signup() {
               }
         })
         if (localStorage.getItem('email')) {
-            history.push('./dashbord');
+            history.push('./postload-arabic');
         }
     }, []);
 
@@ -58,7 +58,11 @@ export default function Signup() {
     const [password, setPassword] = useState("");
     const [phoneNo, setPhoneNo] = useState("");
     const [typeOfSignup, setTypeOfSignup] = useState("Transporter");
-
+    const [select, setSelect] = useState("+92");
+    const[phoneNoCustom,setCustomPhoneNo]=useState();
+    const onchangePhoneNoCustom=(event)=>{
+        setCustomPhoneNo(event.target.value)
+    }
 
     const onchangeText = (event) => {
         setCountry(event.target.value);
@@ -175,6 +179,9 @@ export default function Signup() {
 
 
         }
+    }
+    const onchangeSelect = (event) => {
+        setSelect(event.target.value);
     }
     const onchangeEmail = (event) => {
         setEmail(event.target.value);
@@ -334,12 +341,12 @@ export default function Signup() {
                 email: email,
                 password: password,
                 country: country,
-                phoneNo: phoneNo,
+                phoneNo: select+phoneNo,
                 userType: typeOfSignup,
                 signUpDate: signupDate
 
             },{
-                headers: {"Access-Control-Allow-Origin": "http://localhost:3000" 
+                headers: {"Access-Control-Allow-Origin": "https://react-app-first-version.herokuapp.com" 
                 
                 
             }
@@ -386,37 +393,90 @@ export default function Signup() {
 
     return (
         <div className="SignupModule">
-            <h1>!!التسجيل</h1>
+            <h1>اشتراك!!</h1>
             <p id="Login-Success">Successfully Registered</p>
             
 
             <form id="SignUpForm">
-            <div id="NoteForSubscription">إذا قمت بالتسجيل كناقل ، فيجب عليك دفع 3 دولارات شهريا</div>
-            <div id="SecondNoteForSubscription">إذا قمت بالتسجيل كوسيط ، فيجب عليك دفع 3 دولارات شهريا</div>
-            <div id="SecondNoteForSubscription">مجانا للشاحن</div>
+            <div id="NoteForSubscription">إذا قمت بالتسجيل كـ Transporter ، فيجب عليك دفع 3 دولارات شهريًا</div>
+            <div id="SecondNoteForSubscription">إذا قمت بالتسجيل بصفتك وسيطًا ، فيجب عليك دفع 3 دولارات شهريًا</div>
+            <div id="SecondNoteForSubscription">مجاني للشاحن</div>
 
 
-                <input type="text" placeholder="اسم" name="Name" id="name" value={name} onChange={onchangeName} />
-                <input type="email" placeholder="البريد الإلكتروني" name="Email" id="email" value={email} onChange={onchangeEmail} />
-                <input type="password" placeholder="شعار" name="Password" id="password" value={password} onChange={onchangePassword} />
-                <input type="text" value={country} placeholder="بلد" id="country" onChange={onchangeText} />
-                <input type="tel" placeholder="رقم الهاتف" name="PhoneNumbers" onChange={onchangePhoneNo} id="phoneNo" value={phoneNo} />
+                <input type="text" placeholder="اسم
+" name="Name" id="name" value={name} onChange={onchangeName} />
+                <input type="email" placeholder="البريد الإلكتروني
+" name="Email" id="email" value={email} onChange={onchangeEmail} />
+                <input type="password" placeholder="كلمة المرور
+" name="Password" id="password" value={password} onChange={onchangePassword} />
+                <input type="text" value={country} placeholder="دولة" id="country" onChange={onchangeText} />
+                <div id='phoneNumber'>
+                <NativeSelect
+                  
+                  id="NativeSelectphoneNo" 
+                  value={select}
+                  onChange={onchangeSelect}
+              >
+                     <option value="+92">+92 (Pakistan)</option>
+                     <option value="+91">+91 (India)</option>
+                     <option value="+93">+93 (Afghanistan)</option>
+                     <option value="+61">+61 (Australia)</option>
+                     <option value="+994">+994 (Azerbaijan)</option>
+                     <option value="+880">+880 (Bangladesh)</option>
+                     <option value="+55">+55 (Brazil)</option>
+                     <option value="+1">+1 (Canada)</option>
+                     <option value="+86">+86 (China)</option>
+                     <option value="+33">+33 (France)</option>
+                     <option value="+49">+49 (Germany)</option>
+                     <option value="+30">+30 (Greece)</option>
+                     <option value="+62">+62 (Indonesia)</option>
+                     <option value="+98">+98 (Iran)</option>
+                     <option value="+964">+964 (Iraq)</option>
+                     <option value="+966">+966 (Saudia Arabia)</option>
+                     <option value="+363">+363 (Ireland)</option>
+                     <option value="+39">+39 (Italy)</option>
+                     <option value="+81">+81 (Japan)</option>
+                     <option value="+965">+965 (Kuwait)</option>
+                     <option value="+60">+60 (Malaysia)</option>
+                     <option value="+230">+230 (Mauritius)</option>
+                     <option value="+52">+52 (Mexico)</option>
+                     <option value="+977">+977 (Nepal)</option>
+                     <option value="+850">+850 (North Korea)</option>
+                     <option value="+48">+48 (Poland)</option>
+                     <option value="+974">+974 (Qatar)</option>
+                     <option value="+1">+1 (USA)</option>
+                     <option value="+44">+44 (UK)</option>
+                     <option value="+971">+971 (UAE)</option>
+                     <option value="+20">+20 (Egypt)</option>
+                     <option value="+968">+968 (Oman)</option>
+                     <option value="+973">+973 (Bahrain)</option>
+                     <option value="+961">+961 (Lebanon)</option>
+                     <option value="+963">+963 (Syria)</option>
+                     <option value="+962">+962 (Jordan)</option>
+                     <option value="+218">+218 (Libya)</option>
+                     <option value="+90">+90 (Turkey)</option>
+                     <option value="+64">+64 (NZ)</option>
+              </NativeSelect>
+                <input type="tel" placeholder="رقم الهاتف:
+" name="PhoneNumbers" onChange={onchangePhoneNo} id="phoneNo" value={phoneNo} /></div>
+                <input type="tel" placeholder="(Optional) Custom Phone No:  " name="PhoneNumbers" onChange={onchangePhoneNoCustom} id="phoneNo" value={phoneNoCustom} />
+
                 <div className="div-select">
-                    <InputLabel htmlFor="select" id="LabelSignupAs">اشترك باسم</InputLabel>
+                    <InputLabel htmlFor="select" id="LabelSignupAs">Signup As</InputLabel>
                     <NativeSelect
                         value={typeOfSignup}
                         id="NativeSelect" onChange={onchangeTypeOfSignup}
                     >
 
-                        <option value="Transporter">نقل</option>
+                        <option value="Transporter">الناقل</option>
                         <option value="Shipper">الشاحن</option>
-                        <option value="Broker">سمسار</option>
+                        <option value="Broker">وسيط</option>
                     </NativeSelect>
 
                 </div>
                 
                 <Link to="/login-arabic" id="href-login">تسجيل الدخول؟</Link>
-                <Button value="Submit" onClick={SubmtHandler} variant="outlined" color="primary" id="Signup-Submit" disabled={disabledValue}>التسجيل</Button>            
+                <Button value="Submit" onClick={SubmtHandler} variant="outlined" color="primary" id="Signup-Submit" disabled={disabledValue}>اشتراك</Button>            
                 </form>
                
             <ToastContainer />
