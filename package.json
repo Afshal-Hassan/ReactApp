@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
-    "@emotion/react": "^11.10.0",
+    "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.0",
     "@material/select": "^14.0.0",
     "@mui/material": "^5.10.0",
@@ -30,7 +30,6 @@
     "nth-check": "^2.1.1",
     "package-lock-only": "^0.0.4",
     "react": "^18.2.0",
-    "react-clear-cache": "^1.4.12",
     "react-dom": "^18.2.0",
     "react-phone-number-input": "^3.2.7",
     "react-router-dom": "^5.2.0",
